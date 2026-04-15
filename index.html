@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penny Stock Finder (Demo)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <h1>Penny Stock Finder</h1>
+        <p class="subtitle">Beginner-friendly demo with mock market data.</p>
+      </header>
+
+      <section class="controls" aria-label="Filters">
+        <div class="field">
+          <label for="maxPrice">Max Price ($)</label>
+          <input id="maxPrice" type="number" min="0" step="0.01" value="5" />
+        </div>
+        <div class="field">
+          <label for="minVolume">Min Volume</label>
+          <input id="minVolume" type="number" min="0" step="1000" value="100000" />
+        </div>
+      </section>
+
+      <section class="table-section" aria-label="Penny stock table">
+        <h2>Ranked Stocks</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Ticker</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Volume</th>
+                <th>Momentum</th>
+                <th>Score</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="stockTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="watchlist" aria-label="Watchlist">
+        <h2>Watchlist</h2>
+        <ul id="watchlistItems"></ul>
+      </section>
+
+      <footer class="disclaimer">
+        <p>
+          Disclaimer: This app uses fake data for learning purposes and is not
+          financial advice.
+        </p>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
